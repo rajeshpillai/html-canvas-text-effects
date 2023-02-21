@@ -1,6 +1,6 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   const canvas = this.document.getElementById("canvas1");
-  
+  canvas.style.backgroundColor = "black";
   const ctx = canvas.getContext('2d');
 
   // Set canvas width and height to window
@@ -14,24 +14,24 @@ window.addEventListener("load", function () {
   ctx.lineWidth = 3;
   ctx.strokeStyle = "red";
   ctx.beginPath();
-  ctx.moveTo(canvas.width/2, 0);
-  ctx.lineTo(canvas.width/2, canvas.height);
+  ctx.moveTo(canvas.width / 2, 0);
+  ctx.lineTo(canvas.width / 2, canvas.height);
   ctx.stroke();
 
   ctx.strokeStyle = "green";
   ctx.beginPath();
-  ctx.moveTo(0, canvas.height/2);
-  ctx.lineTo(canvas.width, canvas.height/2);
+  ctx.moveTo(0, canvas.height / 2);
+  ctx.lineTo(canvas.width, canvas.height / 2);
   ctx.stroke();
 
   const text = "Hello!";
-  const textX = canvas.width/2;
-  const textY = canvas.height/2;
-  
-  
+  const textX = canvas.width / 2;
+  const textY = canvas.height / 2;
+
+
   ctx.fillStyle = "white";
   ctx.strokeStyle = "orangered";
-  
+
   ctx.font = "80px Helvetica";
 
   // start, center, end
@@ -42,7 +42,5 @@ window.addEventListener("load", function () {
 
   ctx.fillText(text, textX, textY);
   ctx.strokeText(text, textX, textY);
-  
-
 
 });
